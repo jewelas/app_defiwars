@@ -1,0 +1,92 @@
+table {
+  color: white;
+  width: 100%;
+}
+
+.genesis {
+  align-self: center;
+  text-align: center;
+  color: white;
+  padding: 8px 16px;
+  box-shadow: inset -12.446px -12.446px 31.1151px #353c46, inset 12.446px 12.446px 31.1151px #22262a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.characterBtn {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 8px 16px;
+  box-shadow: inset -12.446px -12.446px 31.1151px #353c46, inset 12.446px 12.446px 31.1151px #22262a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rowContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.characterList {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 180px;
+  background-color: white;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.nftBtnContainer {
+  width: 200px;
+  height: 310px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.nftBtnContainer>img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.characterTitle {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.tierBtn {
+  color: black;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 30px;
+}

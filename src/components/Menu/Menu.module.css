@@ -1,0 +1,102 @@
+.Menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px;
+
+}
+
+.mainMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainMenu a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150.19%;
+    text-align: center;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.mainMenu a:hover {
+    transition: 0.5s;
+    color: #EBC92E;
+}
+
+.menuItem {
+    font-weight: 600;
+    /* font-size: 14px;
+    line-height: 18px; */
+    /* letter-spacing: 0.08em; */
+    color: rgba(255, 200, 3, 0.8);
+    text-shadow: 4px 4px 20px #FF70C2;
+    text-transform: uppercase;
+    font-family: Orbitron;
+}
+
+.submenu {
+    background: #2D2D2E;
+    display: flex;
+    flex-direction: column;
+    height: 0 !important;
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    text-align: left;
+    margin-left: -10px;
+    z-index: 2;
+
+}
+
+.submenuMobile {
+    background: #2D2D2E;
+    display: flex;
+    flex-direction: column;
+    height: 0 !important;
+    overflow: hidden;
+    text-align: left;
+
+}
+
+.submenuMobile a {
+    padding: 5px 0;
+}
+
+.submenuActive {
+    height: auto !important;
+    padding: 10px;
+}
+
+.submenu a {
+    text-align: left;
+    padding: 3px 0;
+    z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+    .mainMenu a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .mainMenu, .Menu {
+        display: none;
+    }
+
+}
+
+
+.menu .submenu {
+    display: block;
+}
+
+.menu:hover .submenu {
+    display: block
+}

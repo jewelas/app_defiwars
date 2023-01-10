@@ -1,0 +1,53 @@
+.text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.2em;
+    font-family: Orbitron;
+
+    color: #FF70C2;
+
+    text-shadow: 4px 4px 20px #FCAC01;
+}
+
+.content {
+    display: flex;
+    column-gap: 30px;
+    padding: 0px 20px;
+    align-items: center;
+}
+
+.contentText {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #008CB1;
+    max-width: 740px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.contentText > div {
+    text-align: justify;
+}

@@ -1,0 +1,309 @@
+.Sword {
+    background: url('../../img/sword-bg.png') no-repeat center;
+    min-height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.logo{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+
+.mainSword{
+    position: relative;
+    height: 170px;
+}
+
+.handle{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.blade{
+    position: absolute;
+    top: -107px;
+    left: 250px;
+    height: 360px;
+    width: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.connectWallet{
+    position: relative;
+}
+
+.connectWallet a{
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 9px #B0FFFF;
+    position: absolute;
+    top:-20px;
+    transition: 0.5s;
+}
+
+.connectWallet a:hover{
+    transition: 0.5s;
+    text-shadow: 0px 0px 13px #B0FFFF;
+    transform: scale(1.1);
+}
+
+.info{
+    margin-top: -30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    max-width: 300px;
+}
+
+.mainConnectWallet{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer {
+    display: flex;
+    margin: 30px 40px 40px;
+    justify-content: center;
+}
+
+.footer a{
+    margin:  0 5px;
+    transition: 0.5s;
+}
+
+.footer a:hover{
+    margin:  0 5px;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.activeSword{
+    height: 350px;
+    width: 960px;
+    opacity: 1;
+    transition: 0.3s cubic-bezier(1,0,.3,.43);
+    position: absolute;
+    top: -107px;
+    left: 310px;
+}
+
+.headerLink{
+    display: none;
+}
+
+.mobileSword{
+    display: none;
+}
+
+
+@media (max-width: 1199.98px) {
+    .mainSword{
+        position: relative;
+        height: 170px;
+    }
+
+    .handle{
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 1;
+        width: 300px;
+    }
+    .blade{
+        position: absolute;
+        top: -87px;
+        left: 140px;
+        height:260px;
+        width: 0;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .activeSword{
+        height:260px;
+        width: 750px;
+        opacity: 1;
+        transition: 0.3s cubic-bezier(1,0,.3,.43);
+        position: absolute;
+        top: -87px;
+        left: 168px;
+    }
+    .footer{
+        width: 60%;
+    }
+  }
+
+
+
+  @media (max-width: 767.98px) {
+
+    .Sword{
+        overflow: auto;
+    }
+      .logo {
+        justify-content: left;
+        padding-left: 5%;
+      }
+    .headerLink{
+        display: flex;
+        align-items: center;
+    }
+    .headerLink a{
+        margin:  0 5px;
+        transition: 0.5s;
+    }
+
+    .headerLink a:hover{
+        margin:  0 5px;
+        transition: 0.5s;
+        transform: scale(1.2);
+    }
+
+    .info svg{
+        max-width: 100%;
+    }
+
+    .mainSword{
+        display: none;
+    }
+
+    .mainConnectWallet{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-top: 50px;
+        max-width: 60%;
+        min-height: 60vh;
+    }
+
+    .connectWallet{
+        position: relative;
+        height: 150px;
+    }
+    .text{
+        max-width: 60%;
+        text-align: left;
+    }
+
+    .mobileSword{
+        display: block;
+        position: absolute;
+        width: 40%;
+        right: 0;
+        top: 0;
+        margin-top: 180px;
+        pointer-events: none;
+    }
+
+    .mobileSwordHandle{
+        position: fixed;
+        right: 92px;
+        bottom: 0;
+        height: 180px;
+        pointer-events: none;
+    }
+
+    .mobileSwordBlade{
+        width: 144px;
+        position: fixed;
+        right: 50px;
+        bottom: 45px;
+        height: 0;
+        opacity: 0;
+        transition: 0.3s cubic-bezier(1,0,.3,.43);
+        pointer-events: none;
+    }
+    .mobileSwordWrapper{
+        position: relative;
+        height: 70vh;
+    }
+    .connectWallet svg{
+        width: 210px;
+    }
+
+    .mobileSwordBladeActive{
+        width: 144px;
+        position: fixed;
+        right: 50px;
+        bottom: 45px;
+        height: 550px;
+        opacity: 1;
+        transition: 0.3s cubic-bezier(1,0,.3,.43);
+        pointer-events: none;
+    }
+    .footer{
+        margin: 10px;
+    }
+  }
+
+
+  @media (max-width: 575.98px) {
+    .mobileSword{
+        display: block;
+        position: absolute;
+        width: 40%;
+        right: 0;
+        top: 0;
+        margin-top: 180px;
+        pointer-events: none;
+    }
+
+    .mobileSwordHandle{
+        position: fixed;
+        right: 20px;
+        bottom: 0;
+        height: 180px;
+        pointer-events: none;
+    }
+
+    .mobileSwordBlade{
+        position: fixed;
+        width: 144px;
+        right: -22px;
+        bottom: 45px;
+        height: 0;
+        opacity: 0;
+        transition: 0.3s cubic-bezier(1,0,.3,.43);
+        pointer-events: none;
+    }
+
+    .mobileSwordBladeActive{
+        width: 144px;
+        position: fixed;
+        right: -22px;
+        bottom: 45px;
+        height: 550px;
+        opacity: 1;
+        transition: 0.3s cubic-bezier(1,0,.3,.43);
+        pointer-events: none;
+    }
+  }

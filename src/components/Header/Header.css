@@ -1,0 +1,12 @@
+.logo {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .logo {
+    justify-content: left;
+    padding-left: 5%;
+  }
+}

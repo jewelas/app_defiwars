@@ -1,0 +1,83 @@
+---
+- hosts: main-staging
+  gather_facts: no
+  become: yes
+  become_user: root
+
+  vars:
+    server_name: "{{ ansible_default_ipv4.address }}"
+    document_root: /var/www/html/
+    app_root: ~/Development/Personal/defiwars/
+    github_repo: https://github.com/DeFiWars-Finance/defiwars.git
+    github_branch: "{{ lookup('env', 'branch') }} || main"
+    dest_root: /var/www/html/
+    php_version: 7.4
+
+  tasks:
+    - name: upgrading system packages
+      apt:
+        upgrade: dist
+        update_cache: yes
+
+    - name: installing packages
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+        state: latest
+      with_items:
+        - build-essential
+        - "php{{ php_version }}"
+        - git
+        - nginx
+        - "php{{ php_version }}-cli"
+        - "php{{ php_version }}-curl"
+        - "php{{ php_version }}-fpm"
+        - "php{{ php_version }}-intl"
+        - "php{{ php_version }}-json"
+        - mysql-server
+        - mysql-client
+        - "php{{ php_version }}-mysql"
+      notify:
+        - restart php-fpm
+        - restart nginx
+
+    - name: "ensure php{{ php_version }}-fpm cgi.fix_pathinfo=0"
+      lineinfile:
+        dest: "/etc/php/{{ php_version }}/fpm/php.ini"
+        regexp: '^(.*)cgi.fix_pathinfo='
+        line: cgi.fix_pathinfo=0
+      notify:
+        - restart php-fpm
+        - restart nginx
+
+    - name: cloning github repository
+      git:
+        repo: "{{ github_repo }}"
+        dest: "{{ dest_root }}"
+        clone: yes
+        update: no
+
+    - name: enabling new site
+      file:
+        src: /etc/nginx/sites-available/default
+        dest: /etc/nginx/sites-enabled/default
+        state: link
+      notify:
+        - stop apache
+        - restart nginx
+
+  handlers:
+    - name: restart php-fpm
+      service:
+        name: "php{{ php_version }}-fpm"
+        state: restarted
+
+    - name: stop apache
+      service:
+        name: apache2
+        state: stopped
+
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restart

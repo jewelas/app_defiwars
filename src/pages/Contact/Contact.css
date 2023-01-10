@@ -1,0 +1,30 @@
+
+.form{
+  width: 480px;
+  margin: auto;
+  text-align: center;
+}
+.form input{
+  width: 100%;
+  margin: 8px;
+}
+.form textarea{
+  width: 100%;
+  margin: 8px;
+}
+.form button {
+  margin: auto;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #fff;
+    text-shadow: 0 0 9px #b0ffff;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+    padding: 14px;
+    background: none;
+    border: none;
+}

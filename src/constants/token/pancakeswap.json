@@ -1,0 +1,46 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2021-03-17T09:56:23Z",
+  "version": {
+    "major": 2,
+    "minor": 5,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/images/pancakeswap.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/bnb.png"
+    },
+    {
+      "name": "JEDI Side",
+      "symbol": "$JEDI",
+      "address": "0xbdC019383A099260caA876c35f4d3975e4e78708",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/0xbdC019383A099260caA876c35f4d3975e4e78708.png"
+    },
+    {
+      "name": "DARTH Side",
+      "symbol": "$DARTH",
+      "address": "0x2C3619C393Bb4718C3De9eA1760db9721f61B22e",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x2C3619C393Bb4718C3De9eA1760db9721f61B22e.png"
+    },
+    {
+      "name": "DeFiWars Finance",
+      "symbol": "$DWARF",
+      "address": "0x33C29af05cA9aE21D8e1bf01Ad5adeFE7b2EE5Ff",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "/images/coins/0x33C29af05cA9aE21D8e1bf01Ad5adeFE7b2EE5Ff.png"
+    }
+  ]
+}

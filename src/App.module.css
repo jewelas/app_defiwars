@@ -1,0 +1,294 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url("./assets/fonts/Orbitron-Regular.ttf");
+}
+
+@font-face {
+  font-family: PressStart2P;
+  src: url("./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf");
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  margin-top: 5rem;
+  padding: 0 15px;
+}
+
+.flexauto {
+  flex: auto;
+}
+
+.logo {
+  width: 155px;
+  height: 73px;
+  filter: drop-shadow(-3px 2px 6px #FFC803);
+}
+
+@media (min-width: 575.98px) {
+  .container {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 540px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .container {
+    margin-top: 5rem;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .container {
+    margin-top: 5rem;
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .container {
+    margin-top: 5rem;
+    max-width: 1140px;
+  }
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nfblock {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 18px;
+  box-shadow: inset -12.446px -12.446px 31.1151px #353c46,
+    inset 12.446px 12.446px 31.1151px #22262a;
+  border-radius: 5px;
+  margin: 18px 4px;
+}
+.nfblock img {
+  margin: auto;
+  padding: 20px;
+  box-shadow: inset -12.446px -12.446px 31.1151px #353c46,
+    inset 12.446px 12.446px 31.1151px #22262a;
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+}
+
+.nfblock select {
+  background: transparent;
+  color: white;
+}
+.nfblock input {
+  background: transparent;
+  color: white;
+}
+.nfblock option {
+  color: black;
+}
+.nfblock button {
+  font-family: Audiowide;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #fff;
+  text-shadow: 0 0 9px #b0ffff;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+  padding: 14px;
+  background: none;
+  border: none;
+}
+.nfblock p {
+  text-align: center;
+  color: white;
+  padding: 8px;
+}
+
+.nfblock label {
+  color: white;
+}
+
+.nfblock button:hover {
+  transition: 0.5s;
+  text-shadow: 0 0 13px #b0ffff;
+  transform: scale(1.1);
+}
+.nfblock button:disabled {
+  color: #000;
+}
+
+.nfblockPower {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  color: #00c3ff;
+}
+.nfblockMine {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: column;
+  color: #ffd700;
+}
+
+.pblock {
+  text-align: center;
+  color: white;
+  padding: 8px;
+}
+
+.Sword {
+  background: url("./img/sword-bgv2.png") repeat center;
+  background-repeat: repeat;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  display: none;
+}
+
+.darkTheme {
+  --styled-select-placeholder__color: #171717;
+  --styled-select__color: white;
+  --styled-select__background-color: transparent;
+  --styled-select__border-color: black;
+  --styled-select__border-width: 1px;
+  --styled-select__border-radius: 5px;
+
+  --styled-select-menu-outer__margin: 10px 0 0 0;
+  --styled-select-menu-outer__padding: 0;
+  --styled-select-menu-outer__background-color: #2e3235;
+  --styled-select-menu-outer__border-color: black;
+  --styled-select-menu-outer__border-style: solid;
+  --styled-select-menu-outer__border-width: 3px;
+
+  --styled-select-option__background-color: #2b2c35;
+
+  --styled-select-option__color--focused: #eee;
+  --styled-select-option__background-color--focused: #000;
+
+  --styled-select-option__color--selected: #eee;
+  --styled-select-option__background-color--selected: #000;
+}
