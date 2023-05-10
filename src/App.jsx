@@ -73,9 +73,9 @@ function App() {
               <Route
                 path="/swap"
                 element={
-                  <ProtectedRoute>
+                  // <ProtectedRoute>
                     <Swap />
-                  </ProtectedRoute>
+                  // </ProtectedRoute>
                 }
               />
 
